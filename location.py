@@ -5,6 +5,7 @@ class location:
 
     def add_wardering(self, wandering, location ):
         self.location_wandering[wandering] = location
+
     def move_wardering(self, wandering):
         delta_x, delta_y = wandering.walk()
         location_now = self.location_wandering[wandering]
@@ -12,5 +13,5 @@ class location:
 
         slef.location_wandering[wandering] = new_location
 
-    def get_location(self, wandering):
-        return self.location_wandering[wandering]
+    """def get_location(self, wandering):
+        return self.location_wandering[wandering]"""
