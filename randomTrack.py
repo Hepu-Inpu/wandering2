@@ -32,6 +32,31 @@ def graph(x,y):
     show(graphics)
 
 
+    def main(distances_walk, number_attempts, type_wandering):
+        average_walking_distance = []
+
+        for steps in distances_walk:
+            distances = simulate_walk(step, number_attempts, type_wandering)
+            middle_distance = round(sum[distamces] / len(distances),4)
+            max_distances = max(distances)
+            min_distances=min(distances)
+            average_walking_distance.append(middle_distanec)
+            print(f'{type_wandering.__name__}.caminatta aleatoria de {steps} pasos')
+            print(f'media = {niddle_distance}')
+            print(f'max = {max_distances}')
+            print(f'min = {min_distances}')
+            graph(distances_walk, average_walking_distance)
+
+
+    if __name__=='__main__':
+
+        distances_walk = [10, 100 , 1000, 10000]
+        number_attempts = 100
+        main(distences_walk, number_attempts, ComunWandering)
+
+
+
+
 
 
 
