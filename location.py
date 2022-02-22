@@ -3,7 +3,7 @@ class location:
     def __init__(self):
         self.location_wandering = ()
 
-    def add_wardering(self, wandering, location ):
+    def add_wardering(self, wandering, track):
         self.location_wandering[wandering] = track
 
     def move_wardering(self, wandering):

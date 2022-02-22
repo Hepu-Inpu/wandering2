@@ -15,14 +15,14 @@ def walking(location, wandering, step):
 
 def simulate_walk(step, number_attempts, type_wandering):
      wandering = type_wandering(name='Alirio')
-     origen = location(0,0)
+     origen = track(0,0)
      distances = []
 
 
      for _ in range(number_attempts):
-         track = track()
-         track.add_wandering(wandering, origen)
-         simulation_walk = walking(track, wandering, step)
+         location = location()
+         location.add_wandering(wandering, origen)
+         simulation_walk = walking(location, wandering, step)
          distances.append(round[simulation_walk,i])
          return distances
 
@@ -37,12 +37,12 @@ def graph(x,y):
 
         for steps in distances_walk:
             distances = simulate_walk(step, number_attempts, type_wandering)
-            middle_distance = round(sum[distamces] / len(distances),4)
+            middle_distance = round(sum(distamces) / len(distances),4)
             max_distances = max(distances)
             min_distances=min(distances)
             average_walking_distance.append(middle_distanec)
             print(f'{type_wandering.__name__}.caminatta aleatoria de {steps} pasos')
-            print(f'media = {niddle_distance}')
+            print(f'media = {middle_distance}')
             print(f'max = {max_distances}')
             print(f'min = {min_distances}')
             graph(distances_walk, average_walking_distance)
@@ -52,7 +52,7 @@ def graph(x,y):
 
         distances_walk = [10, 100 , 1000, 10000]
         number_attempts = 100
-        main(distences_walk, number_attempts, ComunWandering)
+        main(distances_walk, number_attempts, ComunWandering)
 
 
 
