@@ -6,6 +6,7 @@ class wandering:
         self.name= name
 
 class ComunWandering(wandering):
+    
     def __init__(self, name):
         super().__init__(name)
 
