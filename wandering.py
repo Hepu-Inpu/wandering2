@@ -17,7 +17,7 @@ class ComunWandering(wandering):
         super().__init__(name)
        
     def walk(self):
-        dx, dy = random.choice([(0,3),(0,-3),(3,0),(-1,0)])
+        dx, dy = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
         self.x += dx
         self.y += dy
         return [dx,  dy]
@@ -29,7 +29,7 @@ class rightWandering(wandering):
     
     
     def walk(self):
-        dx, dy = random.choice([(0,1), (1,0), (0,-1), (0,-1)])
+        dx, dy = random.choice([(0,5), (5,0), (-1,0), (0,-1)])
         self.x += dx
         self.y += dy
         return [dx,  dy]
@@ -41,7 +41,7 @@ class leftWandering(wandering):
     
     
     def walk(self):
-        dx, dy = random.choice([(0,1), (1,0), (-1,0), (0,-1)])
+        dx, dy = random.choice([(0,1), (1,0), (-5,0), (0,-5)])
         self.x += dx
         self.y += dy
         return [dx,  dy]
